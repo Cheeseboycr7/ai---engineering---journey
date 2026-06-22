@@ -122,7 +122,7 @@ for country in famous_rivers.values():
     print(f"\n{country.title()} is a country with a famous river")
 '''
 
-
+'''
 favorite_languages = {
     'jen': 'python',
     'sarah': 'c',
@@ -138,5 +138,188 @@ for person in people_to_poll:
     else:
         print(f"\n{person.title()} please take the poll")
 
+'''
+
+'''
+6-7. People: Start with the program you wrote for Exercise 6-1 (page 102) . 
+Make two new dictionaries representing different people, and store all three 
+dictionaries in a list called people . Loop through your list of people . As you 
+loop through the list, print everything you know about each person 
+'''
 
 
+users = {
+    "Mandla" : {
+        "first_name" : "Mandla",
+        "last_name" : "Shezi",
+        "age" : 30,
+        "Country" : "South Africa"
+    },
+
+    "Sibongile" : {
+        "first_name" : "Sibongile",
+        "last_name" : "Shezi",
+        "age" : 28,
+        "Country" : "South Africa"
+    },
+
+    "Thandi" : {
+        "first_name" : "Thandi",    
+        "last_name" : "Shezi",
+        "age" : 25,
+        "Country" : "South Africa"
+    }
+}
+
+for username , user_info in users.items():
+    print(f"\nUsername: {username}")
+    full_name = f"{user_info['first_name']} {user_info['last_name']}"
+    age = user_info['age']
+    country = user_info['Country']
+
+    print(f"Full Name: {full_name}")
+    print(f"Age: {age}")
+    print(f"Country: {country}")
+
+
+
+print('--------------New Code------------------')
+
+
+'''
+6-8. Pets: Make several dictionaries, where the name of each dictionary is the 
+name of a pet . In each dictionary, include the kind of animal and the owner’s 
+name . Store these dictionaries in a list called pets . Next, loop through your list 
+and as you do print everything you know about each pet
+'''
+
+pets = {
+    "dog" : {
+        "name" : "Buddy",
+        "age" : 3,
+        "breed" : "Golden Retriever",
+        "owner" : "John"
+},
+
+    "cat" : {
+        "name" : "Whiskers",
+        "age" : 2,
+        "breed" : "Siamese",
+        "owner" : "Emily"
+    },
+
+    "parrot" : {
+        "name" : "Polly",
+        "age" : 1,
+        "breed" : "African Grey",
+        "owner" : "Michael"
+    }
+
+}
+
+for animal_type, animal_info in pets.items():
+    print(f"\nAnimal Type: {animal_type.title()}")
+    name = animal_info['name']
+    age = animal_info['age']
+    breed = animal_info['breed']
+    owner = animal_info['owner']
+
+    print(f"Name: {name}")
+    print(f"Age: {age}")
+    print(f"Breed: {breed}")
+    print(f"Owner: {owner}")
+
+
+'''
+6-9. Favorite Places: Make a dictionary called favorite_places . Think of three 
+names to use as keys in the dictionary, and store one to three favorite places 
+for each person . To make this exercise a bit more interesting, ask some friends 
+to name a few of their favorite places . Loop through the dictionary, and print 
+each person’s name and their favorite places 
+'''
+
+print('\n--------------New Code------------------')
+
+favorite_places = {
+        "mandla" : {
+            "places" : ["south africa", "zimbabwe", "kenya"]
+        },
+        "sibongile" : {
+            "places" : ["south africa", "zimbabwe", "kenya"]
+        },
+        "thandi" : {
+            "places" : ["south africa", "zimbabwe", "kenya"]
+        }
+}
+
+for name, places_info in favorite_places.items():
+    print(f"\n{name.title()}'s favorite places are:")
+    for place in places_info['places']:
+        print(f"- {place.title()}") 
+
+
+'''
+6-10. Favorite Numbers: Modify your program from Exercise 6-2 (page 102) so 
+each person can have more than one favorite number . Then print each person’s 
+name along with their favorite numbers 
+'''
+
+print('\n--------------New Code------------------')
+
+fourate_numbers ={
+    "Mandla" : {
+        "favourite_number" : [7, 10, 9]
+    },
+    "Sibongile" : {
+        "favourite_number" : [3, 8, 15]
+    },
+    "Thandi" : {
+        "favourite_number" : [5, 12, 20]
+    }
+}
+
+for name, number_info in fourate_numbers.items():
+    print(f"\n{name.title()}'s favourite numbers are:")
+    for number in number_info['favourite_number']:
+        print(f"- {number}")
+
+
+print('--------------NEW CODE---------------')
+
+'''
+6-11. Cities: Make a dictionary called cities . Use the names of three cities as 
+keys in your dictionary . Create a dictionary of information about each city and 
+include the country that the city is in, its approximate population, and one fact 
+about that city . The keys for each city’s dictionary should be something like 
+country, population, and fact . Print the name of each city and all of the infor
+mation you have stored about it 
+'''
+
+
+cities = {
+    "new york" : {
+        "country" : "united states",
+        "population" : 8419600,
+        "fact" : "New York City is known as the 'Big Apple'."
+    },
+    "tokyo" : {
+        "country" : "japan",
+        "population" : 13929286,
+        "fact" : "Tokyo is the most populous metropolitan area in the world."
+    },
+    "paris" : {
+        "country" : "france",
+        "population" : 2140526,
+        "fact" : "Paris is known as the 'City of Light'."
+    }
+}
+
+for city, city_info in cities.items():
+    country = city_info['country']
+    population = city_info['population']
+    fact = city_info['fact']
+
+    print(f"\nCity: {city.title()}")
+    print(f"Country: {country.title()}")
+    print(f"Population: {population}")
+    print(f"Fact: {fact}")
