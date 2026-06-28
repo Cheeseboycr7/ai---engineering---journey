@@ -98,8 +98,11 @@ information, call make_album() with the user’s input and print the dictionary
 that’s created . Be sure to include a quit value in the while loop 
 '''
 
+
+
+'''
 while True:
-    print("(enter 'q' at any time to quit)")
+   # print("(enter 'q' at any time to quit)")
     
     artist = input('Enter the artist name: ')
     if artist  == 'q':
@@ -110,4 +113,53 @@ while True:
         break
 
     result = make_album(artist, album)
-    print(result)
+    #print(result)
+'''
+
+'''
+8-9. Magicians: Make a list of magician’s names . Pass the list to a function 
+called show_magicians(), which prints the name of each magician in the list 
+'''
+
+def show_magicians(magicians):
+    for magician in magicians:
+        print(f'{magician}')
+
+
+magicians = ['Chris','Ganda','Mandla','Cheeseboy']
+#show_magicians(magicians)
+
+
+
+
+'''
+8-10. Great Magicians: Start with a copy of your program from Exercise 8-9 . 
+Write a function called make_great() that modifies the list of magicians by add
+ing the phrase the Great to each magician’s name . Call show_magicians() to 
+see that the list has actually been modified 
+'''
+
+
+def make_great(magicians):
+      for magician in magicians:
+        print(f'The great magician {magician}')
+
+
+#make_great(magicians)
+
+#show_magicians(magicians)
+
+
+
+'''
+8-11. Unchanged Magicians: Start with your work from Exercise 8-10 . Call the 
+function make_great() with a copy of the list of magicians’ names . Because the 
+original list will be unchanged, return the new list and store it in a separate list . 
+Call show_magicians() with each list to show that you have one list of the origi
+nal names and one list with the Great added to each magician’s name
+'''
+print('-------NEW CODE-------')
+new_magicians = magicians[:]
+make_great(new_magicians) # make a copy of list magicians
+show_magicians(magicians)
+show_magicians(new_magicians)
