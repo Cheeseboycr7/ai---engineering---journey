@@ -158,8 +158,81 @@ original list will be unchanged, return the new list and store it in a separate 
 Call show_magicians() with each list to show that you have one list of the origi
 nal names and one list with the Great added to each magician’s name
 '''
+
+'''
 print('-------NEW CODE-------')
 new_magicians = magicians[:]
 make_great(new_magicians) # make a copy of list magicians
 show_magicians(magicians)
 show_magicians(new_magicians)
+'''
+
+
+'''
+8-12. Sandwiches: Write a function that accepts a list of items a person wants 
+on a sandwich . The function should have one parameter that collects as many 
+items as the function call provides, and it should print a summary of the sand
+wich that is being ordered . Call the function three times, using a different num
+ber of arguments each time 
+'''
+
+def making_sandwich(*sandwiches):
+
+    if sandwiches:
+        print('\nSandwich ingridients: ')
+        for sandwich in sandwiches:
+            print(f'{sandwich}')
+
+
+#making_sandwich("cheese")
+#making_sandwich("cheese", "lettuce", "tomato")
+#making_sandwich("cheese", "bacon", "polony", "egg", "mayonnaise")
+
+
+
+
+'''
+8-13. User Profile: Start with a copy of user_profile.py from page 153 . Build 
+a profile of yourself by calling build_profile(), using your first and last names 
+and three other key-value pairs that describe you 
+'''
+
+def user_profile(first,last, **info):
+
+    profile = {'first_name': first , 'last_name':last}
+   
+    for key , value in info.items():
+        profile[key] = value
+
+    return profile
+
+
+#user_profiles = user_profile('Mandla','Shezi', country = 'Eswatini', sex = 'male')
+
+#print(user_profiles)
+
+
+'''
+8-14. Cars: Write a function that stores information about a car in a diction
+ary . The function should always receive a manufacturer and a model name . It 
+should then accept an arbitrary number of keyword arguments . Call the func
+tion with the required information and two other name-value pairs, such as a 
+color or an optional feature . Your function should work for a call like this one:
+car = make_car('subaru', 'outback', color='blue', tow_package=True)
+'''
+
+
+def car_info(manufacture, model, **more_info):
+
+    cars = {'manufacture': manufacture, 'model': model}
+
+    for key , value in more_info.items():
+        cars[key] = value
+
+    return cars
+
+car_inf = car_info('subaru','outback', color = 'blue' ,tow_package = True)
+print(car_inf)
+
+
+
