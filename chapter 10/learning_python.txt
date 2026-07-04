@@ -1,0 +1,4 @@
+In python you can print the message to the screen using print function
+In python you can store information in a variable
+In python you can use strings
+In python perform mathimatical calculations
