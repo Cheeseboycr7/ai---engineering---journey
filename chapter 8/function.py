@@ -231,8 +231,8 @@ def car_info(manufacture, model, **more_info):
 
     return cars
 
-car_inf = car_info('subaru','outback', color = 'blue' ,tow_package = True)
-print(car_inf)
+#car_inf = car_info('subaru','outback', color = 'blue' ,tow_package = True)
+#print(car_inf)
 
 
 

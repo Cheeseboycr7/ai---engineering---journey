@@ -7,4 +7,5 @@ call the function using each of these approaches:
 import module_name
 '''
 
-car_info('Camry','Toyota',color= 'blue', available = True)
+car = car_info('Camry','Toyota',color= 'blue', available = True)
+print(car)
